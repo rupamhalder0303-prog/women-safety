@@ -1,0 +1,15 @@
+{
+  "name": "sakhi-womens-safety",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sakhi women safety prototype for Vercel with Supabase",
+  "scripts": {
+    "dev": "vercel dev"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.57.0"
+  },
+  "devDependencies": {
+    "vercel": "^41.7.8"
+  }
+}
