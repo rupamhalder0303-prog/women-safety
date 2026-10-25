@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#762b58">
+
+  <title>Sakhi — Personal Safety</title>
+
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <a class="brand" href="/">♡ sakhi</a>
+    <span class="pill">PROTOTYPE</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">YOUR SAFETY, YOUR CONTROL</p>
+
+        <h1>
+          Feel safer.<br>
+          <span>Stay connected.</span>
+        </h1>
+
+        <p class="muted">
+          Prepare for a journey, manage trusted contacts,
+          and practise an emergency workflow.
+        </p>
+      </div>
+
+      <div class="art" aria-hidden="true">♡</div>
+    </section>
+
+    <div class="notice">
+      <b>Demo only:</b> SOS records an event in the database.
+      It does not call emergency services or notify contacts.
+      Do not rely on this prototype in an emergency.
+    </div>
+
+    <section class="grid">
+
+      <article class="card">
+        <p class="eyebrow">EMERGENCY TOOL</p>
+        <h2>Need help?</h2>
+
+        <p class="muted">
+          Test the demo alert workflow.
+        </p>
+
+        <button id="sos" class="sos">
+          SOS — Record demo alert
+        </button>
+
+        <p id="sosStatus" class="status" aria-live="polite"></p>
+      </article>
+
+      <article class="card">
+        <p class="eyebrow">BE PREPARED</p>
+        <h2>Trusted contacts</h2>
+
+        <form id="contactForm">
+          <label for="name">Name</label>
+          <input
+            id="name"
+            maxlength="80"
+            required
+            placeholder="Trusted person's name"
+          >
+
+          <label for="phone">Phone</label>
+          <input
+            id="phone"
+            type="tel"
+            maxlength="30"
+            required
+            placeholder="+91 98765 43210"
+          >
+
+          <button type="submit">Add contact</button>
+        </form>
+
+        <p id="contactStatus" class="status" aria-live="polite"></p>
+        <ul id="contacts"></ul>
+      </article>
+
+      <article class="card">
+        <p class="eyebrow">JOURNEY CHECK-IN</p>
+        <h2>Plan a trip</h2>
+
+        <form id="tripForm">
+          <label for="destination">Destination</label>
+          <input
+            id="destination"
+            maxlength="160"
+            required
+            placeholder="Where are you going?"
+          >
+
+          <label for="eta">ETA (optional)</label>
+          <input id="eta" type="datetime-local">
+
+          <button type="submit">Save demo trip</button>
+        </form>
+
+        <p id="tripStatus" class="status" aria-live="polite"></p>
+        <ul id="trips"></ul>
+      </article>
+
+      <article class="card">
+        <p class="eyebrow">RECENT ACTIVITY</p>
+        <h2>Demo alerts</h2>
+
+        <ul id="alerts"></ul>
+      </article>
+
+    </section>
+
+    <section class="notice">
+      <b>Emergency in India:</b>
+      For an actual emergency, call 112 directly.
+
+      <a
+        href="https://112.gov.in/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Official 112 website
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    Learning prototype · Not an emergency service
+  </footer>
+</body>
+</html>
